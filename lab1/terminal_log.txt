@@ -1,0 +1,101 @@
+Script started on Thu Sep  1 11:41:29 2022
+[?1034hbash-3.2$ pwd
+/Users/evs09/Desktop/School/Fall2022/CISC3140
+bash-3.2$ l[Kmkdir L[Klab1
+bash-3.2$ cd lab1
+bash-3.2$ ls
+bash-3.2$ cd ..
+bash-3.2$ ls
+lab1			terminal_log.txt	versions.txt
+bash-3.2$ mv versions.txt la[K[K.[K/lab1
+mv: rename versions.txt to /lab1: Permission denied
+bash-3.2$ mv versions.txt /lab1[K[K[K[K[Klab1
+bash-3.2$ ls
+lab1			terminal_log.txt
+bash-3.2$ cd lab1
+bash-3.2$ ls
+versions.txt
+bash-3.2$ cd ..
+bash-3.2$ mc[Kv terminal_lof[Kg.tct[K[Kxt lab1
+bash-3.2$ ls
+lab1
+bash-3.2$ cd lab1
+bash-3.2$ ls
+terminal_log.txt	versions.txt
+bash-3.2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mdeleted:    ../versions.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31m./[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ cd ..
+bash-3.2$ pwd
+/Users/evs09/Desktop/School/Fall2022/CISC3140
+bash-3.2$ git a[Kstatus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mdeleted:    versions.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mlab1/[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ fi[K[Kgit add lab1/ [K
+bash-3.2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mnew file:   lab1/terminal_log.txt[m
+	[32mnew file:   lab1/versions.txt[m
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mdeleted:    versions.txt[m
+
+bash-3.2$ git add [K/rm vver[K[K[Kersions.txt
+git: 'add/rm' is not a git command. See 'git --help'.
+bash-3.2$ git add/rm versions.txt[C[1P[1P[1P[C[1P
+rm 'versions.txt'
+bash-3.2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	[32mnew file:   lab1/terminal_log.txt[m
+	[32mrenamed:    versions.txt -> lab1/versions.txt[m
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   lab1/terminal_log.txt[m
+
+bash-3.2$ git add -a[Kall[K[K[K0[K-all
+bash-3.2$ git[K[K[KD[K^D[K[Kexit
+exit
+
+Script done on Thu Sep  1 11:47:40 2022
