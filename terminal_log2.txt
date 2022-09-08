@@ -1,0 +1,35 @@
+Script started on Thu Sep  8 14:43:16 2022
+[?1034hbash-3.2$ pwd
+/Users/evs09/Desktop/School/Fall2022/CISC3140
+bash-3.2$ ls
+DueDateCalculator.java	lab1			terminal_log2.txt
+bash-3.2$ jaca[K[Kvac DueDateCalculator.java
+bash-3.2$ java DueDatecal[K[K[KCalculator
+Days left until lab 0 is due: 20
+Days left until lab 1 is due: 48
+Days left until lab 2 is due: 76
+Days left until lab 3 is due: 90
+bash-3.2$ git add[K[K[Kstati[Kus
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	[31mmodified:   lab1/terminal_log.txt[m
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	[31mDueDateCalculator.class[m
+	[31mDueDateCalculator.java[m
+	[31mterminal_log2.txt[m
+
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git Add [K[K[K[Kadd DueDateCalculao[Ktor.java
+bash-3.2$ git add DueDateCalculator.java[K[K[K[Kclass
+bash-3.2$ exit
+exit
+
+Script done on Thu Sep  8 14:44:54 2022
