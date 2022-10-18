@@ -14,14 +14,13 @@ public class DueDateCalculator {
         
         LocalDate today = java.time.LocalDate.now();
         
-        //int daysLeft = (int)Duration.between(today.atStartOfDay(), first.atStartOfDay()).toDays();
+        System.out.println(getDaysLeft(today, second));
+    }
+    
+    public static int getDaysLeft(LocalDate one, LocalDate two) {
+        int daysLeft = (int)Duration.between(one.atStartOfDay(), two.atStartOfDay()).toDays();
         
-        for(int i = 0; i < 4; i++){
-            int daysLeft = (int)Duration.between(today.atStartOfDay(), dueDates[i].atStartOfDay()).toDays();
-            
-            System.out.println("Days left until lab " + i + " is due: " + daysLeft);
-        }
-        
+        return daysLeft;
     }
 
 }
