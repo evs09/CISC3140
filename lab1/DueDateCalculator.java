@@ -6,7 +6,6 @@ import java.time.format.DateTimeFormatter;
 public class DueDateCalculator {
     public static void main(String[] args){
         getUserInput();
-        
     }
     
     public static void getUserInput(){
@@ -21,23 +20,29 @@ public class DueDateCalculator {
         LocalDate[] dueDates = new LocalDate[] {today, l1, l2, l3, l4};
         
         Scanner input = new Scanner(System.in);
-        System.out.println("Please select two from the following, or enter two dates (MM/DD/YYYY or MM-DD): ");
+        System.out.println("Please select two from the following, or enter two dates (MM/DD/YYYY or MM-DD), or enter x to stop: ");
         
         for(int i = 0; i < dueDates.length; i++){
             System.out.println( "[" + i + "] " + dateTitles[i] + dueDates[i]);
         }
-        
-        String a = input.next();
-        String b = input.next();
-        
-        if(a.length() <= 2){
-            int d1 = Integer.parseInt(a);
-            int d2 = Integer.parseInt(b);
+        while(input.hasNext()){
+            String a = input.next();
+            if(a.charAt(0) == 'x') break;
             
-            getDaysLeft(dueDates[d1], dueDates[d2]);
-        }
-        else{
-            getDaysLeft(a, b);
+            String b = input.next();
+
+            //If user selected 2: 
+            if(a.length() <= 2){
+                int d1 = Integer.parseInt(a);
+                int d2 = Integer.parseInt(b);
+
+                getDaysLeft(dueDates[d1], dueDates[d2]);
+            }
+            //Custom Date handling:
+            else{
+                getDaysLeft(a, b);
+            }
+            
         }
     }
     
@@ -45,12 +50,13 @@ public class DueDateCalculator {
         int d = (int)Duration.between(one.atStartOfDay(), two.atStartOfDay()).toDays();
         String daysLeft = Integer.toString(d);
         
-        System.out.println("There are " + daysLeft + " days between those two dates."); 
+        System.out.println("There are " + daysLeft + " days between " + one + " and " + two); 
     }
     
     //Overloaded Method to take strings (custom input)
     public static void getDaysLeft(String date1, String date2){
         
+        //Conditionals ensure proper formating
         if(date1.length() == 10 && date1.charAt(2) == '/' && date1.charAt(5) == '/' 
                 && date2.charAt(2) == '/' && date2.charAt(5) == '/' && date2.length() == 10){
             DateTimeFormatter form = DateTimeFormatter.ofPattern("MM/dd/yyyy");
@@ -77,6 +83,8 @@ public class DueDateCalculator {
             
             getDaysLeft(one, two);
         }
+        
+        //Add aditional conditional statements (else ifs) here to allow allow different input types.
         
         else {
             String e = "Invalid input format";
