@@ -1,3 +1,6 @@
+#.class files
 .class
+
+#DS_Store
 .DS_Store
 **/.DS_Store
