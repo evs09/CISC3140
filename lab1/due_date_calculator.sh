@@ -20,18 +20,7 @@ days_left(){
 }
 
 inputHandler(){
-    if [ $1 -eq 1 ]
-    then
-        printf " $(days_left $d1) days left until $date1 \n"
-    elif [ $1 -eq 2 ]
-    then
-        printf " $(days_left $d2) days left until $date2 \n"
-    elif [ $1 -eq 3 ]
-    then
-        printf " $(days_left $d3) days left until $date3 \n"
-    else 
-        printf " $(days_left $d4) days left until $date4 \n"
-    fi 
+    printf " $(days_left ${calculatelist[$1-1]}) days left until ${dateslist[$1-1]} \n"
 }
 
 echo "Select one of the following: "
