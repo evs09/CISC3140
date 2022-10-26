@@ -1,0 +1,3 @@
+# Shell and Make Reflection
+
+Both my Shell script and Make file separate the java program into building (compiling) and running. The ways to do this are similarly sectioned, with Shell using functions and Make having rules. Rules consist of targets, prerequisites, and recipes, the actions to execute. Meanwhile, the functions can simply have the commands you want to execute, like javac, and java. These need to be defined in variables in make.  
