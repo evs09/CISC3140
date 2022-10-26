@@ -1,0 +1,7 @@
+# Group Project Reflection
+
+After establishing our group in class, we made a discord group to communicate with each other. We decided to use the squirrel dataset, and I made the google slides for the presentation. I made a quick template consisting of the title slide, a slide with the question and program description, and a results slide. I duplicated these five times so we’d each have a space to put our work in. Galilee made the repository and sent invitations to our emails. We individually formulated our questions and sent them to the group chat. We also made branches for each of our questions and our code. 
+
+Though we didn’t write our programs together, we discussed our blockers and how to resolve them in class. I also felt comfortable asking Galilee for his input through discord. The workload felt balanced because we were each assigned a question, the corresponding code, and two slides. 
+
+An obstacle I had on my end of the project was that each datum in the CSV file wasn’t being correctly separated even though I made an FPAT variable. This seemed to be an issue with my local machine because my code ran adequately on my groupmate’s computer. However, this meant that whenever I wanted to test my code I had to ask them to run it for me. I did my best to make sure there were no compilation errors before asking them to so I’d only be testing the calculations. Aside from that, I learned a lot about AWK especially since this is my first time using it. 
